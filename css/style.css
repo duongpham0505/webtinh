@@ -1,0 +1,398 @@
+/* 
+    người thực hiện: Phạm Văn Dương
+    vesion: 1.0
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+html,body{
+    font-family: 'Roboto','Helvetica','Aria','DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* start header css */
+
+header .color{
+    color: red;
+}
+header .logo{
+    font-weight: bold;
+    font-size: 29px;
+}
+header .logo-header{
+    margin-top: 15px;
+}
+header .logo-bottom{
+    font-size: 18px;
+    margin-left: 45px;
+    color: rgb(51, 48, 48);
+}
+header .search{
+    margin-top: 25px;
+}
+header .icon{
+    margin-top: 25px;
+    padding-left: 60px;
+}
+header .icon-phone{
+    padding-top: 10px;
+}
+header phone{
+    padding-left: 25px;
+
+}
+
+/* start menu */
+menu{
+    height: 50px;
+    background: #23232B;
+}
+menu  ul.menu-main {
+    line-height: 50px;
+    text-align: center;
+}
+menu  ul > li{  
+   position: relative;
+   width: 100px;
+}
+
+menu  ul.menu-main > li > a{
+    display: block;
+    padding: 0px 10px 0px 10px; 
+    color: white;
+    transition: 0.5s;
+}
+menu  ul.menu-main > li > a:hover{
+    background: #0d0d14;
+    color: #ce3c22;
+}
+menu  ul.menu-main > li.back-color{
+    width: 200px;
+}
+ul.submenu{
+    width: 120px;
+    min-height: 240px;
+    background: #42DA50;
+    position: absolute;
+    display: none;
+}
+ul.submenu li{
+    
+    list-style: none;
+    text-indent: 20px;
+}
+ul.submenu li a{
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    border-top: 1px solid #ccc;
+
+
+}
+ul.submenu li a:hover{
+    background: #BC6F51;
+}
+ul.menu-main > li:hover ul.submenu{
+    display: block;
+}
+.method{
+    background: #2e2b2a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.med{
+    height: 100px;
+    margin: 0px 10px 0px 10px;
+    background: #e95531;
+    color: azure;
+    font-size: 12px;
+    line-height: 100px;
+}
+banner .banner-image img{
+    width: 100%;
+}
+.med svg{
+    padding-top: 30px;
+}
+.med i{
+    padding-top: 30px;
+}
+/* start main  */
+main{
+    width: 100%;    
+    min-height: 1000px;
+    margin-bottom: 50px;
+    /* background: cadetblue; */
+}
+main .search-product{
+    width: 90%;
+    margin: auto;
+    height: 110px;
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+main .search-product .search-top h5{
+    color: red;
+    padding: 20px 0px 0px 20px;
+}
+
+main .menu-main > ul > li{
+    width: 20%;
+    position: relative;
+    margin: 0px 2px 0px 2px;
+    background: rgb(228, 212, 212);
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+main .menu-main > ul > li > a{
+    color: rgb(44, 40, 40);
+    display: block;
+}
+main .menu-main > ul > li > a:hover{
+    color: red;
+}
+main .menu-main .sub-menu{
+    width: 220px;
+    position: absolute;
+    margin-left: 50px;
+    min-height: 200px;
+    display: none;
+    background: rgb(204, 204, 197);
+}
+main .menu-main .sub-menu li{
+    border-bottom: 1px solid gray;
+
+}
+main .menu-main .sub-menu li a{
+    display: block;
+    color: rgb(48, 41, 41);
+    padding-right: 70px;
+}
+main .menu-main > ul > li:hover .sub-menu{
+    display: block;
+}
+/* main tab-search */
+
+div.tab {
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    background-color: #f1f1f1; 
+    padding-left: 100px;
+}
+
+/* định dạng các button tab */
+div.tab button {
+    background-color: inherit; 
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* đổi màu khi một button tab được hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* đổi màu nền cho tab đang được hiển thị nội dung */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* định dạng nội dung hiển thị */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-top:1px solid snow  ;
+    margin-top: 10px;
+}
+
+
+.tabcontent .product_tabs{
+    width: 100%;
+    margin: auto;
+    /* position: relative; */
+}
+
+.tabcontent .product_tabs .product-col{
+    width: 19%;
+    /* border: 1px solid rgb(240, 225, 225); */
+    border-radius: 8px;
+    padding: 5px;
+    margin: 6px;
+    box-shadow: 1px 1px 2px 1px gray;
+    /* position: relative; */
+}
+.tabcontent .product_tabs .product-col .sub-product{
+    width: 100%;
+    height: 300px;
+    background: tan;
+    position: relative;
+    display: block;
+}
+.tabcontent .product_tabs .product-col .sub-product img{
+    width: 100%;
+}
+.tabcontent .product_tabs .product-col .sub-product img:hover{
+    opacity: 0.2;
+    transform: scale(1.12);
+    transition: 2s;
+}
+.tabcontent .product_tabs .text_product{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.tabcontent .product_tabs .product-col .sub-product .sub-describe{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: honeydew;
+    display: none;
+}
+.tabcontent .product_tabs .product-col .sub-product .sub-describe .text-span{
+    display: none;
+}
+.tabcontent .product_tabs .product-col .sub-product:hover .sub-describe .text-span{
+    display: block;
+    color: red;
+    transition: 2s;
+}
+.laptop-dell{
+    padding-top: 30px;
+}
+.laptop-dell .title-lap{
+    width: 90%;
+    margin-left: 30px;
+    border-bottom: 3px solid red;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    transform: skew(-35deg);
+}
+.laptop-dell .title-lap span{
+    color: white;
+    background: red;
+    padding: 3px 5px;
+    display: inline-block;
+}
+.product-laptop{
+    width: 100%;
+    padding-top: 50px;
+
+}
+.product-laptop .laptop{
+    width: 95%;
+    margin: auto;
+    padding: 2px;
+}
+.product-laptop .laptop .product-col{
+    border:  1px solid gray;
+    width: 18%;
+    height: 330px;
+    border-radius: 10%;
+    margin: auto;
+}
+.product-laptop .laptop .product-col .sub-product{
+    width: 100%;
+}
+.product-laptop .laptop .product-col .sub-product img{
+    width: 100%;
+}
+.product-laptop .laptop .product-col .text_product{
+    text-align: center;
+}
+
+
+main news{
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid gray; */
+    /* padding-bottom: 30px; */
+    /* margin-bottom: 20px; */
+}
+.new-video{
+    margin-top: 30px;
+    width: 95%;
+    margin: auto;
+}
+.new-video .boder{
+    border-bottom: 3px solid red;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.new-video .text-news{
+        padding-top: 30px;
+}
+.new-video .text-news span{
+    color: purple;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: tahoma;   
+}
+.col-news .row{
+    border-bottom: 1px solid gray;
+    padding: 20px;
+}
+
+
+main .partner-inner{
+    margin-top: 20px;
+    width: 90%;
+    height: 145px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-shadow: 2px  2px 2px 4px grey;
+}
+.icon-image{
+    padding-top: 20px;
+}
+.icon-image:hover img{
+    transform: scale(1.12);
+    transition: 2s;
+}
+footer{
+    width: 100%;
+    height: 400px;
+    background: #23232B;
+    color: #fff;
+}
+footer .footer{
+    padding-top: 70px;
+    width: 95%;
+    margin: auto;
+}
+.footer .col-4 span{
+    padding-top: 10px;
+}
+.footer .col-2 span{
+    padding-top: 10px;
+}
+footer .footer-text{
+    padding-top: 40px;
+    border-top: 1px solid wheat;
+}
+.footer-top{
+    /* border-bottom: 1px solid wheat; */
+    padding-top: 10px;
+    padding-bottom: 30px;
+}

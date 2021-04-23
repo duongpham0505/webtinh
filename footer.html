@@ -1,0 +1,73 @@
+<footer>
+    <div class="footer">
+        <div class="row footer-top">
+            <div class="col-4 d-flex flex-column">
+                <h5>Công ty TNHH q thành viên</h5>
+                <span>Văn phòng: Số 14,Ngõ 592/29 Trường Chinh,Đống Đa,HN</span>
+                <span>Tel: 0912 73 11 10 - 01683.158.052</span>
+                <span>Email: robocon20062007@gmail.com</span>
+                <span>Web: http://delecweb.com - http://delectech.vn</span>
+            </div>
+            <div class="col-2 d-flex flex-column">
+                <h5>DỊCH VỤ KHÁCH HÀNG</h5>
+                <span>Trợ giúp khách hàng</span>
+                <span>Gửi đơn đóng góp ý kiến</span>
+                <span>Chính sách và quy định</span>
+                <span>Gửi trả phản hồi khách hàng</span>
+            </div>
+            <div class="col-2 d-flex flex-column">
+                <h5>VỀ CHÚNG TÔI</h5>
+                <span class="one">Giới thiệu về công ty</span>
+                <span class="two">triết lý kinh doanh</span>
+                <span class="three">Hình Thành Và Phát Triển</span>
+                <span class="four">Liên Hệ</span>
+            </div>
+            <div class="col-4 d-flex flex-column">
+                <h5>LIÊN KẾT MẠNG XÃ HỘI</h5>
+
+            </div>
+        </div>
+        <div class="row footer-text">
+            <h4>Người thực hiện: Phạm Văn Dương</h4>
+        </div>
+    </div>
+    <script>
+        function includeHTML() {
+          var i, elem, file, xhttp; // Khởi tạo các biến
+      
+          // Lấy tất cả các thẻ có class là include-html (Như ở trên mình định nghĩa 2 thẻ để include header/footer)
+          var includeFiles = document.getElementsByClassName('include-html');
+          
+          // Duyệt vòng lặp từ mảng phần tử ở trên
+          for (i = 0; i < container.length; i++) {
+            elem = includeFiles[i]; // Gán biến elem bằng thẻ đang được duyệt
+            file = elem.getAttribute("data-file"); // Gán biến file là attribute của thẻ đang được duyệt
+      
+            if (file) { // Kiểm tra nếu tồn tại attribute này thì thực hiện tiếp
+              xhttp = new XMLHttpRequest(); // Khởi tạo request
+              xhttp.onreadystatechange = function() {
+                // Lắng nghe event khi request kết thúc
+                if (this.readyState == 4) {
+                  // Nếu status là 200 (thành công) thì set nội dung của file vào thẻ đang được duyệt
+                  if (this.status == 200) {elem.innerHTML = this.responseText;}
+      
+                  // Nếu status 404 (lỗi) thì hiển thị nội dung lỗi không thấy component
+                  if (this.status == 404) {elem.innerHTML = "Component not found.";}
+      
+                  // Sau khi duyệt xong thẻ này thì xoá class include-html 
+                  elem.classList.remove("include-html");
+      
+                  // Gọi lại function includeHTML để duyệt tất cả các thẻ có class include-html còn lại
+                  includeHTML();
+                }
+              }
+              // Tạo và gửi request
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              return; // Thoát function
+            }
+          }
+        };
+        includeHTML();
+      </script>
+</footer>
